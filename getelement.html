@@ -1,0 +1,67 @@
+<html>
+<body>
+<h2>js number methods</h2>
+<p>the toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+<p id="dem"></p>
+<script>
+var x=9.656;
+document.getElementById("dem").innerHTML=
+	x.toFixed(0)+"<br>"+
+	x.toFixed(2)+"<br>"+
+	x.toFixed(4)+"<br>"+
+	x.toFixed(6);
+</script>
+<p id="demo"></p>
+
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML = 
+  x.toPrecision() + "<br>" +
+  x.toPrecision(2) + "<br>" +
+  x.toPrecision(4) + "<br>" +
+  x.toPrecision(6);  
+</script>
+
+<p>The valueOf() method returns a number as a number:</p>
+
+<p id="dm"></p>
+
+<script>
+var x = 123;
+
+document.getElementById("dm").innerHTML = 
+  x.valueOf() + "<br>" +
+  (123).valueOf() + "<br>" +
+  (100 + 23).valueOf();
+</script>
+
+<p>The global JavaScript function parseInt() converts strings to numbers:</p>
+
+<p id="dmo"></p>
+
+<script>
+document.getElementById("dmo").innerHTML = 
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10");  
+</script>
+<h2> javascript array</h2>
+<p id="abc"></p>
+<script>
+var rum=["saab","volvo","bmw"];
+document.getElementById("abc").innerHTML=car;
+</script>
+<h2>js array elements are accessed using numberic indexes(starting from 0).</p>
+<p id="raj"></p>
+<script>
+var vam=["saab","volko","bmm"];
+rum[0]="Ope1";
+document.getElementById("raj").innerHTML=rum;
+</script>
+
+
+</body>
+</html>
