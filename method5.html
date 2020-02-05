@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax forms</title>
+</head>
+<body>
+	<h2>XMLHttpRequest object</h2>
+	<p id="demo">let ajax change this text.</p>
+	<button type="button" onclick="loadDoc()">change content</button>
+	<script>
+		function loadDoc() {
+			var xhttp;
+			if(window.XMLHttpRequest) {
+				xhttp=new XMLHttpRequest();
+			}else{
+				xhttp=new ActiveXObject("microsoft.XMLHTTP");
+			}
+			xhttp.onreadystatechange=function(){
+				if(this.readyState==4 && this.status==200){
+					document.getElementById("demo").innerHTML=this.responseText;
+				}
+			};
+			xhttp.open("GET","demo.txt",true);
+			xhttp.send();
+		}
+	</script>
+
+</body>
+</html>

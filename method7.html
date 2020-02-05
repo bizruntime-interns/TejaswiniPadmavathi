@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>ajax callback functions</title>
+	</head>
+	<body>
+		<div id="demo">
+			<h2>the XMLHttpRequest Object</h2>
+			<button type="button" onclick="loadDoc('demo.txt',myfunction)">change content</button>
+		</div>
+		<script>
+			function loadDoc(url,cFunction){
+				var xhttp;
+				xhttp=new XMLHttpRequest();
+				xhttp.onreadystatechange=function(){
+					if(this.readyState==4 && this.status==200){
+						cFunction(this);
+					}
+				};
+				xhttp.open("GET",url,true);
+				xhttp.send();
+			}
+			function myfunction(xhttp){
+				document.getElementById("demo").innerHTML=xhttp.responseText;
+			}
+		</script>
+	</body>
+</html>

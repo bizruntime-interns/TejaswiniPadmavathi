@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>submit forms</title>
+	</head>
+	<body>
+		<h2>javascript validation</h2>
+		<p>pleasevinput a number between 1 and 10</p>
+		<input id="numb">
+			<button type="button" onclick="myfunction()">submit</button>
+			<p id="demo"></p>
+			<script>
+			function myfunction(){
+				var x,text;
+				x=document.getElementById("numb").value;
+				if(isNAN(x)||x<1||x>10){
+				text="input not valid";
+				}else{
+				text="input ok";
+				}
+				document.getElementById("demo").innerHTML=text;
+			}
+			</script>
+			</body></html>
+			
