@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<h1>m=xmlhttprequest object</h1>
+		<p id="demo">let ajax change this text.</p>
+		<button type="button" onclick="loadDoc()"> change content</button>
+		<script>
+			function loadDoc() {
+			var xhttp=new XMLHttpRequest();
+			xhttp.open("GET","ajax_info.txt",false);
+			xhttp.send();
+			document.getElementById("demo").innerHTML=xhttp.responseText;
+			}
+		</script>
+	</body>
+</html>
